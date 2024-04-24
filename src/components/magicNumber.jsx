@@ -10,7 +10,7 @@ function MagicNumber() {
     const count = useRef(0);
 
     const handleClick = () => {
-        count.current = count.current + 1; // Update count using useRef correctly
+        count.current = count.current + 1; 
         if (count.current === magicNumber) {
             setMessages({
                 p: "You have reached the magic Number",
@@ -26,7 +26,7 @@ function MagicNumber() {
 
     return (
         <div>
-            <p>{messages.p}</p>
+<p style={{ color: count.current === magicNumber ? "green" : count.current === secondMagicNumber ? "red" : "black" }}>{messages.p}</p>
             <button onClick={handleClick}>{messages.button}</button>
         </div>
     );
